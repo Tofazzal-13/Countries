@@ -1,6 +1,7 @@
 .card{
-  border: 2px solid green;
+  border: 2px solid rgb(104, 124, 79);
   padding: 10px;
+  margin-bottom: 10px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

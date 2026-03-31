@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
 import "./Country.css"
 
-const Country = ({country, handleVisitedCountry}) => {
-   
-    const [visited, setVisited] = useState(false)
+const Country = ({ country, handleVisitedCountry, handleVisitedFlag }) => {
+
+    const [visited, setVisited] = useState(false);
 
     const handleVisited = () => {
-        if(visited){
+        if (visited) {
             setVisited(false)
-        } 
-        else{
+        }
+        else {
             setVisited(true)
-        } 
-        handleVisitedCountry(country) 
+            handleVisitedCountry(country)
+
+        }
     }
-    
+
     return (
-        <div className={`card ${ visited && "visited_card"}`}>
+        <div className={`card ${visited && "visited_card"}`}>
 
             <img src={country.flags.flags.png} alt="" />
             <h4>Name : {country.name.common}</h4>
@@ -24,6 +25,9 @@ const Country = ({country, handleVisitedCountry}) => {
             <p>Area:{country.area.area} {country.area.area > 300000 ? "(Big Country)" : "(Small Country)"}</p>
             <button onClick={handleVisited}>
                 {visited ? "Visited" : "Not Visited"}
+            </button>
+            <button onClick={() => {handleVisitedFlag(country.flags.flags.png)}}>
+                Add Visited Flag
             </button>
 
         </div>
