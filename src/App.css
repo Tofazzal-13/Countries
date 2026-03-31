@@ -182,12 +182,3 @@
   }
 }
 
-.card{
-  border: 2px solid green;
-  padding: 10px;
-}
-.card_display{
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 10px;
-}
